@@ -1,0 +1,38 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+# pubspec.lock is committed: apps should build reproducibly
+
+# Generated plugin registrants (regenerated on every build)
+**/GeneratedPluginRegistrant.java
+**/GeneratedPluginRegistrant.h
+**/GeneratedPluginRegistrant.m
+**/GeneratedPluginRegistrant.swift
+
+# Machine-specific local config
+android/local.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store
+
+# Local environment / keys (pass via --dart-define instead)
+env/
+
+# Build artifacts & release binaries
+goldie/
+brag-output*/
+
+# Supabase CLI
+supabase/.temp/
+supabase/.branches/
+
+# Test artifacts
+coverage/

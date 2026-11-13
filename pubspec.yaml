@@ -1,0 +1,57 @@
+name: invonce
+description: "Invonce — invoices that get you paid."
+publish_to: 'none'
+
+# version: build-name+build-number → Android versionName/versionCode, iOS CFBundleShortVersionString/CFBundleVersion.
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^8.2.1
+  url_launcher: ^6.3.3
+  supabase_flutter: ^2.18.0
+  pdf: ^3.13.1
+  printing: ^5.15.1
+  flutter_native_splash: ^2.4.4
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  # Hanken Grotesk + JetBrains Mono bundled offline. google_fonts finds files in
+  # any folder named `google_fonts`, so no runtime download is ever needed.
+  assets:
+    - assets/google_fonts/
+
+# `dart run flutter_launcher_icons` regenerates the platform icons from this master.
+# The master itself is rendered by `RENDER_ICON=1 flutter test test/icon_render_test.dart`.
+flutter_launcher_icons:
+  image_path: assets/icon/icon.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  adaptive_icon_background: "#4D1520"
+  adaptive_icon_foreground: assets/icon/icon_foreground.png
+
+# Native launch screen (shown before Flutter starts): wine background + the mark.
+# `dart run flutter_native_splash:create` regenerates Android drawables / iOS storyboard.
+flutter_native_splash:
+  color: "#4D1520"
+  image: assets/icon/icon_foreground.png
+  android: true
+  ios: true
+  web: false
+  android_12:
+    color: "#4D1520"
+    image: assets/icon/icon_foreground.png
+    icon_background_color: "#4D1520"
